@@ -13,11 +13,10 @@ public class chooseSummerCamp {
         if (answer1.equals("a"))
         {
             System.out.println("swim + hear scream");
-            System.out.println("a. Grab an oar and get in a boat.\nb. Run to your cabin.");
-            String answer2 = choice.nextLine();
+            String answer2 = getInput("a. Grab an oar and get in a boat.\nb. Run to your cabin.");
             if (answer1.equals("a"))
             {
-                System.out.println("You row a canoe out into the middle of the lake and float there for 2 hours. Finally, the police show up and you row back to shore. The police inform you that murderer came to the camp and killed a dozen campers. You are lucky to be alive.")
+                System.out.println("You row a canoe out into the middle of the lake and float there for 2 hours. Finally, the police show up and you row back to shore. The police inform you that murderer came to the camp and killed a dozen campers. You are lucky to be alive.");
             }
             else if (answer1.equals("b"))
             {
@@ -32,5 +31,22 @@ public class chooseSummerCamp {
         {
             System.out.println("eat");
         }
+    }
+
+
+
+
+
+    public static String getInput(String question)
+    {   
+        Scanner choose = new Scanner(System.in);
+        System.out.println(question);
+        String answer = choose.nextLine();
+        while (!(answer.equals("a") || !(answer.equals("b"))));
+        {
+            System.out.println("Type \"a\" or \"b\".");
+            getInput(question);
+        }
+        return answer;
     }
 }
