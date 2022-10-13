@@ -1,3 +1,11 @@
+/*
+Connor Sprouse & Dylan Ward
+10 October 2022
+APCSA Period 4
+
+Description:
+This program takes user input to navigate through a story based on the user's decisions.
+*/
 import java.util.Scanner;
 public class chooseSummerCamp {
 //create scanner object for user input
@@ -7,12 +15,13 @@ static Scanner choice = new Scanner(System.in);
         //sets the scene + the start of the giant if/else statement that leads the story
         System.out.println("Choose Your Own Adventure: Summer Camp! \nType \"a\", \"b\" or \"c\" to choose an action and progress the story.");
 
+        //items that can be used if the user makes a specific choice
         boolean walkingStick = false;
         boolean oar = false;
-        boolean lighter = false;
 
-        System.out.println("You have 3 items to choose from to have with you at the start of your activity. You can choose 2 of the following:");
-        System.out.println("a. Walking Stick \nb. Oar \nc. Lighter");
+        //the lighter and pet rock are useless items that don't affect the story
+        System.out.println("You have 4 items to choose from to have with you at the start of your activity. You can choose 2 of the following:");
+        System.out.println("a. Walking Stick \nb. Oar \nc. Lighter\nd. Pet Rock");
         String itemChoice1 = choice.nextLine();
         String itemChoice2 = choice.nextLine();
         if (itemChoice1.equals("a") || itemChoice2.equals("a"))
@@ -22,10 +31,6 @@ static Scanner choice = new Scanner(System.in);
         else if (itemChoice1.equals("b") || itemChoice2.equals("b"))
         {
             oar = true;
-        }
-        else if (itemChoice1.equals("c") || itemChoice2.equals("c"))
-        {
-            lighter = true;
         }
 
         System.out.println("\nWelcome to Camp Crystal Lake! Here, we have a large variety of activities to choose from. What would you like to start off with?\na. Go for a swim.\nb. Go hiking \nc. Head to the mess hall.");
